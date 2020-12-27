@@ -1,0 +1,10 @@
+<h1>Edit Country</h1>
+
+<% country.forEach((country)=> { %>
+    <form action="/edit" method="POST">
+        <p>Country Code: <input type="text" name="co_code" value="<%= country.co_code %>" readonly></p>
+        <p>Country Name: <input type="text" name="co_name" value="<%= country.co_name %>"></p>
+        <p>Country Details: <textarea type="text" name="co_details" rows="10" cols="30" ><%= country.co_details %></textarea></p>
+        <input type="submit" value="OK">
+    </form>
+    <% }) %>

@@ -1,0 +1,17 @@
+<h1>All City Detials</h1>
+
+<% city.forEach((city)=> { %>
+    <form action="/edit" method="POST">
+        <p>City Code: <input type="text" value="<%= city.cty_code %>" readonly></p>
+        <p>City Name: <input type="text" value="<%= city.cty_name %>" readonly></p>
+        <p>City Population: <input type="text" value="<%= city.population %>" readonly></p>
+        <p>By the Sea: <input type="text" value="<%= city.isCoastal %>" readonly></p>
+        <p>Area (KM): <input type="text" value="<%= city.areaKM %>" readonly></p>
+        </br>
+        </br>
+        <p>Country Code: <input type="text" value="<%= city.co_code %>" readonly></p>
+        <p>Country Name: <input type="text" value="<%= city.co_code %>" readonly></p>
+    </form>
+    <% }) %>
+
+        <a href='/'>Home</a>
